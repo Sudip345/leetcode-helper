@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Leetcode Helper",
+  "version": "1.0",
+  "description": "A simple Chrome extension that helps with Leetcode problems.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["popup.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
